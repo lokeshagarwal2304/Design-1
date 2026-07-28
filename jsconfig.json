@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "lucide-react": [
+        "components/ui/icons"
+      ],
+      "framer-motion": [
+        "components/ui/motion"
+      ]
+    }
+  }
+}

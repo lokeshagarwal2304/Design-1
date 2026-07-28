@@ -1,0 +1,156 @@
+/* Price List Page Dedicated CSS */
+
+.pricelist-main-content {
+  background-color: #FAFAFA;
+  padding: 0;
+  font-family: var(--font-plus-jakarta), sans-serif;
+  color: #111827;
+}
+
+/* Hero Section style matches Gallery Hero */
+.pricelist-hero-section {
+  position: relative;
+  padding: 135px 48px 45px 48px;
+  background-image: url('/purple-banner.png');
+  background-size: 100% 100%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid rgba(16, 29, 44, 0.08);
+  text-align: center;
+  overflow: hidden;
+}
+
+.pricelist-hero-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: center;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.pricelist-hero-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.pricelist-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 16px;
+}
+
+.pricelist-breadcrumb a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pricelist-breadcrumb a:hover {
+  color: #ffffff;
+}
+
+.breadcrumb-separator {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.breadcrumb-active {
+  color: #ffffff;
+}
+
+.pricelist-hero-title {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  letter-spacing: -1px;
+}
+
+.pricelist-hero-subtitle {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Vertical Stacked Images Styling */
+.pricelist-images-section {
+  padding: 60px 24px 80px 24px;
+  display: flex;
+  justify-content: center;
+  background-color: #FAFAFA;
+}
+
+.pricelist-images-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.pricelist-page-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.05);
+  border: 1px solid #E5E7EB;
+  transition: transform 0.3s ease;
+  background-color: #ffffff;
+}
+
+.pricelist-page-img:hover {
+  transform: translateY(-4px);
+}
+
+@media (max-width: 992px) {
+  .pricelist-images-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pricelist-hero-section {
+    padding: 120px 24px 60px 24px;
+  }
+  
+  .pricelist-images-section {
+    padding: 40px 20px 60px 20px;
+  }
+  
+  .pricelist-images-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .pricelist-hero-title {
+    font-size: 32px;
+  }
+}
+
+/* Light Watery Wave Gradient Text Animation */
+@keyframes lightWateryShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.light-watery-gradient-text {
+  background: linear-gradient(120deg, #ffffff 0%, #cbd5e1 30%, #ffffff 60%, #e2e8f0 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: lightWateryShimmer 4s ease infinite;
+}

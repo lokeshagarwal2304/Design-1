@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Color Palette */
+  --color-primary: #101d2c;
+  /* Deep Slate / Navy */
+  --color-secondary: #0066ff;
+  /* Vibrant Blue */
+  --color-text-dark: #1e293b;
+  /* Slate 800 */
+  --color-text-muted: #5e6d82;
+  /* Slate 500 / Steel */
+  --color-bg-body: #ffffff;
+  --color-white: #ffffff;
+
+  /* Fonts */
+  --font-family: var(--font-manrope), "Manrope", sans-serif;
+
+  /* Shadows */
+  --shadow-header: 0px 10px 40px -10px rgba(16, 29, 44, 0.06);
+  --shadow-button: 0px 8px 24px -6px rgba(16, 29, 44, 0.12);
+  --shadow-menu: 0px 8px 20px -4px rgba(16, 29, 44, 0.08);
+
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #ffffff;
+  color: var(--color-text-dark);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Continuous Fluid Watery Gradient Animation */
+@keyframes fluidWateryWave {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-watery-gradient {
+  background: linear-gradient(120deg, #D62E2E 0%, #1E3A8A 30%, #991B1B 65%, #1D4ED8 85%, #D62E2E 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fluidWateryWave 4s ease-in-out infinite;
+  display: inline-block;
+}
+
+.animate-steel-watery-gradient {
+  background: linear-gradient(120deg, #0F172A 0%, #475569 25%, #94A3B8 50%, #334155 75%, #0F172A 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fluidWateryWave 5s ease-in-out infinite;
+  display: inline-block;
+}
+
+.animate-c3-watery-gradient {
+  background: linear-gradient(120deg, #0F172A 0%, #334155 25%, #C3C3C3 50%, #64748B 75%, #0F172A 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fluidWateryWave 5s ease-in-out infinite;
+  display: inline-block;
+}
+
+.animate-liquid-watery-gradient {
+  background: linear-gradient(120deg, #FF3333 0%, #FF8A80 25%, #FFFFFF 50%, #FF5252 75%, #E53935 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fluidWateryWave 4s ease-in-out infinite;
+  display: inline-block;
+  filter: drop-shadow(0 4px 20px rgba(229, 57, 53, 0.6));
+}
+
+.animate-gallery-watery-gradient {
+  background: linear-gradient(120deg, #D62E2E 0%, #FF5252 25%, #FFA726 50%, #EF4444 75%, #D62E2E 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fluidWateryWave 4s ease-in-out infinite;
+  display: inline-block;
+  filter: drop-shadow(0 2px 14px rgba(214, 46, 46, 0.3));
+}
